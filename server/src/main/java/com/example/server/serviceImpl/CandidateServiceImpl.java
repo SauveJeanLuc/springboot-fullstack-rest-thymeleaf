@@ -59,7 +59,8 @@ public class CandidateServiceImpl implements ICandidateService {
         Optional<Candidate> existingCandidate = candidateRepository.findById(id);
         if(existingCandidate.isPresent()){
             Integer currentVote = existingCandidate.get().getVotes();
-            existingCandidate.get().setVotes(currentVote++);
+            existingCandidate.get().setVotes(currentVote+1);
         }
+        candidateRepository.save(existingCandidate.get());
     }
 }
