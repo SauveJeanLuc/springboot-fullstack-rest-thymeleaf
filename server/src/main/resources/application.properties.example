@@ -1,0 +1,9 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/db_name
+spring.datasource.username=
+spring.datasource.password=
+spring.session.jdbc.initializer.enabled=true
+spring.session.jdbc.initialize-schema= always
+spring.jpa.database=mysql
+spring.jpa.show-sql=true
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.naming-strategy = org.hibernate.cfg.ImprovedNamingStrategy
