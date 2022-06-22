@@ -34,7 +34,7 @@ public class CandidateApi {
 
         model.addAttribute("candidate", candidateResponse.getBody());
 
-        return "index";
+        return "user";
     }
 
     @GetMapping("/all")
