@@ -2,7 +2,7 @@
 <html xml:th="https://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Separate Html</title>
+    <title>Vote User</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -29,7 +29,9 @@
         <div class="card-body">
             <h5 class="card-title" th:text="${candidate.name}"></h5>
             <p class="card-text" th:text="|Votes: ${candidate.votes}|"></p>
-            <a href="#" class="btn btn-success">Vote</a>
+            <form th:action="@{/client/vote/{id} (id=${candidate.id})}" method="post">
+                <button type="submit" formmethod="post" class="btn btn-success">Vote</button>
+            </form>
         </div>
     </div>
 </div>
